@@ -19,6 +19,7 @@ Smax = min_solve(x)
 Sboth = both_solve(x)
 
 i, j = 10, 1000
+
 @printf "%f %f\n" get_val(Sboth, i, j)...
 println(get_val(Smin, i, j))
 println(get_val(Smax, i, j))
