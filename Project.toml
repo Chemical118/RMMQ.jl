@@ -1,0 +1,7 @@
+name = "RMMQ"
+uuid = "d0b5aea9-4936-4882-bbb2-0641c17559e4"
+authors = ["Ryu <wowo0118@sasa.hs.kr>"]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
