@@ -4,19 +4,19 @@ export min_solve, max_solve, both_solve, get_val
 
 abstract type AbstractSolver end
 
-struct MinSolver <: AbstractSolver
-    solver_min::Matrix
+struct MinSolver{T <: Real} <: AbstractSolver
+    solver_min::Matrix{T}
     Log::Vector{Int}
 end
 
-struct MaxSolver <: AbstractSolver
-    solver_max::Matrix
+struct MaxSolver{T <: Real} <: AbstractSolver
+    solver_max::Matrix{T}
     Log::Vector{Int}
 end
 
-struct BothSolver <: AbstractSolver
-    solver_min::Matrix
-    solver_max::Matrix
+struct BothSolver{T <: Real} <: AbstractSolver
+    solver_min::Matrix{T}
+    solver_max::Matrix{T}
     Log::Vector{Int}
 end
 
