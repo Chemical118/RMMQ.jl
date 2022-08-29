@@ -1,6 +1,6 @@
 name = "RMMQ"
 uuid = "d0b5aea9-4936-4882-bbb2-0641c17559e4"
-authors = ["Ryu Hyunwoo <wowo0118@sasa.hs.kr>", 
+authors = ["Ryu Hyunwoo <wowo0118@korea.ac.kr>", 
            "Kyungmo Ku <kyungmoku7141@gmail.com>"]
 version = "0.1.0"
 
