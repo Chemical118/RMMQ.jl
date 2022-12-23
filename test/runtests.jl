@@ -3,23 +3,51 @@ using RMMQ, Test
 n = 100000
 x = rand(n)
 
-Si = min_solve(x)
-Sa = max_solve(x)
-Sb = both_solve(x)
+mi = MinSolver(x)
+ma = MaxSolver(x)
+ex = ExtreSolver(x)
+
+@testset "Solver exception test" begin
+    @test_throws ErrorException minimum(ma)
+    @test_throws ErrorException minimum(ma[1:n])
+    @test_throws ErrorException maximum(mi)
+    @test_throws ErrorException maximum(mi[1:n])
+    @test_throws ErrorException extrema(mi)
+    @test_throws ErrorException extrema(mi[1:n])
+    @test_throws ErrorException extrema(ma)
+    @test_throws ErrorException extrema(ma[1:n])
+end
+
+@testset "Solver partial value test" begin
+    for ind in 1:1000
+        i, j = rand(1:n), rand(1:n)
+        ti, tj = i > j ? (j, i) : (i, j)
 
 
-for ind in 1:1000
-    i, j = rand(1:n), rand(1:n)
-    ti, tj = i > j ? (j, i) : (i, j)
+        rmin, rmax = extrema(@view x[ti:tj])
 
+        pmin = minimum(mi[ti:tj])
+        pmax = maximum(ma[ti:tj])
+        pmin1, pmax1 = extrema(ex[ti:tj])
+        pmin2, pmax2 = minimum(ex[ti:tj]), maximum(ex[ti:tj])
 
-    rmin, rmax = extrema(@view x[ti:tj])
+        @test (pmin, pmax) == (pmin1, pmax1)
+        @test (pmin, pmax) == (pmin2, pmax2)
+        @test pmin == rmin
+        @test pmax == rmax
+    end
+end
 
-    pmin = get_val(Si, i, j)
-    pmax = get_val(Sa, i, j)
-    pmin1, pmax1 = get_val(Sb, i, j)
+@testset "Solver value test" begin
+    rmin, rmax = extrema(x)
+
+    pmin = minimum(mi)
+    pmax = maximum(ma)
+    pmin1, pmax1 = extrema(ex)
+    pmin2, pmax2 = minimum(ex), maximum(ex)
 
     @test (pmin, pmax) == (pmin1, pmax1)
+    @test (pmin, pmax) == (pmin2, pmax2)
     @test pmin == rmin
     @test pmax == rmax
 end
