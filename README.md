@@ -14,13 +14,13 @@ using RMMQ, Printf
 n = 1000
 x = rand(n)
 
-Smin = min_solve(x)
-Smax = min_solve(x)
-Sboth = both_solve(x)
+Smin = MinSolver(x)
+Smax = MaxSolver(x)
+Sboth = ExtreSolver(x)
 
 i, j = 10, 1000
 
-@printf "%f %f\n" get_val(Sboth, i, j)...
-println(get_val(Smin, i, j))
-println(get_val(Smax, i, j))
+@printf "%f %f\n" extrema(Sboth[i:j])...
+println(minimum(Smin[i:j]))
+println(maximum(Smax[i:j]))
 ```
