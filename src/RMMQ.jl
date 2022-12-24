@@ -165,8 +165,6 @@ function Base.getindex(S::AbstractSolver, I::UnitRange{Int})
         return MaxSolverData(S, I)
     elseif S isa ExtreSolver
         return ExtreSolverData(S, I)
-    else
-        error("Undefined solver struct!")
     end
 end
 
@@ -238,7 +236,7 @@ end
 
 function _get_minimum(S::MinSolver, x::Int, y::Int)
     if x > y
-        x, y = y, x
+        error("Wrong index input")
     end
 
     j = S.Log[y - x + 1]
@@ -247,7 +245,7 @@ end
 
 function _get_minimum(S::ExtreSolver, x::Int, y::Int)
     if x > y
-        x, y = y, x
+        error("Wrong index input")
     end
 
     j = S.Log[y - x + 1]
@@ -256,7 +254,7 @@ end
 
 function _get_maximum(S::MaxSolver, x::Int, y::Int)
     if x > y
-        x, y = y, x
+        error("Wrong index input")
     end
 
     j = S.Log[y - x + 1]
@@ -265,7 +263,7 @@ end
 
 function _get_maximum(S::ExtreSolver, x::Int, y::Int)
     if x > y
-        x, y = y, x
+        error("Wrong index input")
     end
 
     j = S.Log[y - x + 1]
@@ -274,7 +272,7 @@ end
 
 function _get_extrema(S::ExtreSolver, x::Int, y::Int)
     if x > y
-        x, y = y, x
+        error("Wrong index input")
     end
 
     j = S.Log[y - x + 1]

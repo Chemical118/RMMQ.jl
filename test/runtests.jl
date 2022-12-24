@@ -7,7 +7,7 @@ mi = MinSolver(x)
 ma = MaxSolver(x)
 ex = ExtreSolver(x)
 
-@testset "Solver exception test" begin
+@testset "Solver struct exception test" begin
     @test_throws ErrorException minimum(ma)
     @test_throws ErrorException minimum(ma[1:n])
     @test_throws ErrorException maximum(mi)
@@ -16,6 +16,14 @@ ex = ExtreSolver(x)
     @test_throws ErrorException extrema(mi[1:n])
     @test_throws ErrorException extrema(ma)
     @test_throws ErrorException extrema(ma[1:n])
+end
+
+@testset "Solver index exception test" begin
+    @test_throws ErrorException minimum(mi[n:1])
+    @test_throws ErrorException maximum(ma[n:1])
+    @test_throws ErrorException minimum(ex[n:1])
+    @test_throws ErrorException maximum(ex[n:1])
+    @test_throws ErrorException extrema(ex[n:1])
 end
 
 @testset "Solver partial value test" begin

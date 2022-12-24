@@ -16,11 +16,11 @@ x = rand(n)
 
 Smin = MinSolver(x)
 Smax = MaxSolver(x)
-Sboth = ExtreSolver(x)
+Sext = ExtreSolver(x)
 
 i, j = 10, 1000
 
-@printf "%f %f\n" extrema(Sboth[i:j])...
+@printf "%f %f\n" extrema(Sext[i:j])...
 println(minimum(Smin[i:j]))
 println(maximum(Smax[i:j]))
 ```
