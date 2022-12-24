@@ -2,7 +2,9 @@
 ## Overview
 `RMMQ` provides fast way to get a minimum, maximum value by using [`Range minimum query`](https://en.wikipedia.org/wiki/Range_minimum_query).
 
-[![codecov](https://codecov.io/gh/Chemical118/RMMQ.jl/branch/master/graph/badge.svg?token=TT6PWZU5OP)](https://codecov.io/gh/Chemical118/RMMQ.jl)
+[![CI](https://github.com/Chemical118/RMMQ.jl/workflows/CI/badge.svg)](https://github.com/Chemical118/RMMQ.jl/actions?query=workflow%3ACI)
+[![Codecov](https://codecov.io/gh/Chemical118/RMMQ.jl/branch/master/graph/badge.svg?token=TT6PWZU5OP)](https://codecov.io/gh/Chemical118/RMMQ.jl)
+[![Docs Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://chemical118.github.io/RMMQ.jl/dev/)
 
 ## Install
 ```julia
