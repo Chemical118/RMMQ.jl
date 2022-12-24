@@ -1,8 +1,8 @@
-# RMMQ.jl
+# RMMQ.jl Documentation
+## Overview
 `RMMQ` provides fast way to get a minimum, maximum value by using [`Range minimum query`](https://en.wikipedia.org/wiki/Range_minimum_query).
 
-[![Codecov](https://codecov.io/gh/Chemical118/RMMQ.jl/branch/master/graph/badge.svg?token=TT6PWZU5OP)](https://codecov.io/gh/Chemical118/RMMQ.jl)
-[![Docs Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliahub.com/docs/DecisionTree/pEDeB/0.10.11/)
+[![codecov](https://codecov.io/gh/Chemical118/RMMQ.jl/branch/master/graph/badge.svg?token=TT6PWZU5OP)](https://codecov.io/gh/Chemical118/RMMQ.jl)
 
 ## Install
 ```julia
@@ -11,6 +11,7 @@ Pkg.add(url="https://github.com/Chemical118/RMMQ.jl")
 ```
 
 ## Example
+You can convert a solver from the array and use the sliced solver in the basic function.
 ```julia
 using RMMQ, Printf
 
