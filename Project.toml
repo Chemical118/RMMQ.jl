@@ -1,7 +1,10 @@
 name = "RMMQ"
 uuid = "d0b5aea9-4936-4882-bbb2-0641c17559e4"
-authors = ["Ryu Hyunwoo <wowo0118@korea.ac.kr>"]
+authors = ["Ryu Hyunwoo <wowo0118@korea.ac.kr>", 
+           "Kyungmo Ku <kyungmoku7141@gmail.com>"]
 version = "0.1.0"
 
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 [deps]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
