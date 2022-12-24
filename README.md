@@ -3,7 +3,7 @@
 
 [![CI](https://github.com/Chemical118/RMMQ.jl/workflows/CI/badge.svg)](https://github.com/Chemical118/RMMQ.jl/actions?query=workflow%3ACI)
 [![Codecov](https://codecov.io/gh/Chemical118/RMMQ.jl/branch/master/graph/badge.svg?token=TT6PWZU5OP)](https://codecov.io/gh/Chemical118/RMMQ.jl)
-[![Docs Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://chemical118.github.io/RMMQ.jl/dev/)
+[![Docs Latest](https://img.shields.io/badge/docs-latest-blue.svg)](https://chemical118.github.io/RMMQ.jl/dev/)
 
 ## Install
 ```julia
